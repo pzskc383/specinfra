@@ -12,6 +12,10 @@ class Specinfra::Command::Openbsd::Base::Package < Specinfra::Command::Base::Pac
       "pkg_add #{option} #{package}"
     end
 
+    def remove(package, version=nil, option='')
+      "pkg_delete #{option} #{package}"
+    end
+
     def get_version(package, _opts=nil)
       "pkg_info -I #{package} | sed -e 's/#{package}-//' | cut -d' ' -f1"
     end
