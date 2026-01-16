@@ -1,3 +1,4 @@
 [submodule "integration-test"]
 	path = integration-test
-	url = https://github.com/serverspec/serverspec-integration-test.git
+	url = git@github.com:pzskc383/serverspec-integration-test.git
+	branch = feature/test-package-remove
